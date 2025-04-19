@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: lightgray;
+            height: 100vh;
+             display: flex;
+            justify-content: center;
+            /* align-items: center;  */
+            scroll-behavior: smooth;
+            z-index: 1;
+        }
+        .container{
+            margin-top: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            box-shadow: 0 20px 40px orangered;
+            margin: 2em;
+        }
+        .box{
+            max-width: 600px;
+            max-height: 500px;
+            margin: 2em;
+            padding: 2em;
+            background-color: white;
+            
+        }
+        .box:first-child{
+            background-color: orange;
+        }
+        .box:nth-child(10){
+            background-color: orangered;
+        }
+        .box:nth-child(12){
+            background-color: rgb(0, 255, 174);
+        }
+        .box:nth-child(14){
+            background-color: darkorange;
+        }
+        .box:nth-child(16){
+            background-color: saddlebrown;
+        }
+        .box:nth-child(18){
+            background-color: indigo;
+            color: lightgray;
+        }
+        .box:nth-child(20){
+            background-color: orange;
+        }
+        .box:nth-child(2){
+            background-color: aqua;
+        }
+        .box:nth-child(4){
+            background-color: black;
+            color: white;
+        }
+        .box:nth-child(6){
+            background-color: rgb(7, 252, 7);
+        }
+        .box:nth-child(8){
+            background-color: orchid;
+        }
+        .forms{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 1.2em;
+
+        }
+
+       
+        .inputText{
+            width: 70%;
+            margin: 3px;
+            height: 2em;
+            text-emphasis: 7pc;
+            animation: slidergg 1s linear forwards;
+        }
+        #textarea{
+            resize: none;
+            height: 10em;
+        }
+
+        .fad-in {
+  /* start hidden or in your base state */
+    opacity: 0;
+    transform: translateX(0);
+    }
+
+/* this is the “trigger” class we’ll add */
+    .fad-in.animate {
+     opacity: 1;
+     animation: slider 1s linear forwards;
+        }
+
+    @keyframes slider {
+        0% {
+            transform: translateY(-100%);
+        }
+         100% {
+         transform: translateY(0);
+         }
+    }
+
+    button{
+        width: 30%;
+        height: 30px;
+        background-color: orange;
+        cursor: pointer;
+        border: none;
+        border-radius: 3pc;
+        margin: 3em;
+    }
+
+   
+    </style>
+</head>
+<body>
+    <div class="containner">
+        <div class="box fad-in">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam omnis explicabo assumenda, necessitatibus eligendi architecto voluptatum aspernatur labore non quia ipsum recusandae soluta praesentium, quis, ad tempora amet quibusdam nam ducimus? Delectus, cupiditate! Doloribus, sint quam magnam cumque placeat fugiat reiciendis vero doloremque voluptatum, deleniti voluptate delectus possimus quos animi?</div>
+        <div class="box fad-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, et animi. Illum, necessitatibus quod in ratione obcaecati dolores velit earum nobis at asperiores quam, voluptas quisquam distinctio. Voluptates qui error sapiente, ex repellat iusto nisi alias et officia possimus quisquam, magni nobis iste, esse ullam autem sunt quibusdam maxime dolor.</div>
+        <div class="box fad-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quo amet veniam, hic esse deleniti necessitatibus possimus quos iusto praesentium dolor tempora minus repellendus laborum facere sequi. Illum earum debitis natus eligendi iure nobis nisi magnam eum repellendus ipsa fugit pariatur vero et iste asperiores excepturi, non libero deserunt amet?</div>
+        <div class="box fad-in">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste numquam, illo rem corrupti temporibus eaque nesciunt tempore impedit! Adipisci nam, voluptates ipsam voluptatibus nobis excepturi voluptas magni. Atque temporibus nemo porro architecto optio et ea voluptatem nesciunt quos, itaque ipsam rem assumenda blanditiis deleniti odio natus at id ex nihil?</div>
+        <div class="box fad-in">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt tempore reprehenderit, molestiae totam in ex earum architecto iusto sapiente dolorum blanditiis. Temporibus, voluptates. Quam blanditiis eius assumenda quasi placeat ducimus dignissimos vero nisi fugit, beatae obcaecati voluptatem inventore quia, optio id autem dolorum velit voluptate! Quidem, labore iusto. Atque, eligendi!</div>
+        <div class="box fad-in">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, eum odio repellat, consequatur beatae dignissimos rem dolor molestias iste voluptatem suscipit ex veritatis maiores sequi! Laudantium iure rerum, maiores ratione voluptatum odio iste accusantium blanditiis totam assumenda quae amet dolorem. Quos est doloremque blanditiis, unde optio voluptatem magnam rem eius!</div>
+        <div class="box fad-in">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit facere amet magni veniam, sit culpa sint eaque ducimus quas nam dolor ex, tenetur quod vitae velit delectus magnam? Quidem, officia quam aut optio autem veritatis consequuntur est aperiam blanditiis dicta iusto illum tempore hic eius magnam magni aliquid iste rem!</div>
+        <div class="box fad-in">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, sapiente laborum. Animi, perferendis perspiciatis. Odit, delectus iure distinctio quod tenetur commodi quaerat magnam adipisci nostrum impedit totam nihil laborum reprehenderit et quis repellendus architecto expedita sint accusantium amet inventore ex placeat aut? Officiis eius perferendis ut! Maiores porro minima laudantium.</div>
+        <div class="box fad-in">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam omnis explicabo assumenda, necessitatibus eligendi architecto voluptatum aspernatur labore non quia ipsum recusandae soluta praesentium, quis, ad tempora amet quibusdam nam ducimus? Delectus, cupiditate! Doloribus, sint quam magnam cumque placeat fugiat reiciendis vero doloremque voluptatum, deleniti voluptate delectus possimus quos animi?</div>
+        <div class="box fad-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, et animi. Illum, necessitatibus quod in ratione obcaecati dolores velit earum nobis at asperiores quam, voluptas quisquam distinctio. Voluptates qui error sapiente, ex repellat iusto nisi alias et officia possimus quisquam, magni nobis iste, esse ullam autem sunt quibusdam maxime dolor.</div>
+        <div class="box fad-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quo amet veniam, hic esse deleniti necessitatibus possimus quos iusto praesentium dolor tempora minus repellendus laborum facere sequi. Illum earum debitis natus eligendi iure nobis nisi magnam eum repellendus ipsa fugit pariatur vero et iste asperiores excepturi, non libero deserunt amet?</div>
+        <div class="box fad-in">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste numquam, illo rem corrupti temporibus eaque nesciunt tempore impedit! Adipisci nam, voluptates ipsam voluptatibus nobis excepturi voluptas magni. Atque temporibus nemo porro architecto optio et ea voluptatem nesciunt quos, itaque ipsam rem assumenda blanditiis deleniti odio natus at id ex nihil?</div>
+        <div class="box fad-in">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt tempore reprehenderit, molestiae totam in ex earum architecto iusto sapiente dolorum blanditiis. Temporibus, voluptates. Quam blanditiis eius assumenda quasi placeat ducimus dignissimos vero nisi fugit, beatae obcaecati voluptatem inventore quia, optio id autem dolorum velit voluptate! Quidem, labore iusto. Atque, eligendi!</div>
+        <div class="box fad-in">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, eum odio repellat, consequatur beatae dignissimos rem dolor molestias iste voluptatem suscipit ex veritatis maiores sequi! Laudantium iure rerum, maiores ratione voluptatum odio iste accusantium blanditiis totam assumenda quae amet dolorem. Quos est doloremque blanditiis, unde optio voluptatem magnam rem eius!</div>
+        <div class="box fad-in">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam omnis explicabo assumenda, necessitatibus eligendi architecto voluptatum aspernatur labore non quia ipsum recusandae soluta praesentium, quis, ad tempora amet quibusdam nam ducimus? Delectus, cupiditate! Doloribus, sint quam magnam cumque placeat fugiat reiciendis vero doloremque voluptatum, deleniti voluptate delectus possimus quos animi?</div>
+        <div class="box fad-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, et animi. Illum, necessitatibus quod in ratione obcaecati dolores velit earum nobis at asperiores quam, voluptas quisquam distinctio. Voluptates qui error sapiente, ex repellat iusto nisi alias et officia possimus quisquam, magni nobis iste, esse ullam autem sunt quibusdam maxime dolor.</div>
+        <div class="box fad-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quo amet veniam, hic esse deleniti necessitatibus possimus quos iusto praesentium dolor tempora minus repellendus laborum facere sequi. Illum earum debitis natus eligendi iure nobis nisi magnam eum repellendus ipsa fugit pariatur vero et iste asperiores excepturi, non libero deserunt amet?</div>
+        <div class="box fad-in">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste numquam, illo rem corrupti temporibus eaque nesciunt tempore impedit! Adipisci nam, voluptates ipsam voluptatibus nobis excepturi voluptas magni. Atque temporibus nemo porro architecto optio et ea voluptatem nesciunt quos, itaque ipsam rem assumenda blanditiis deleniti odio natus at id ex nihil?</div>
+        <div class="box fad-in">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt tempore reprehenderit, molestiae totam in ex earum architecto iusto sapiente dolorum blanditiis. Temporibus, voluptates. Quam blanditiis eius assumenda quasi placeat ducimus dignissimos vero nisi fugit, beatae obcaecati voluptatem inventore quia, optio id autem dolorum velit voluptate! Quidem, labore iusto. Atque, eligendi!</div>
+        <div class="box fad-in">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, eum odio repellat, consequatur beatae dignissimos rem dolor molestias iste voluptatem suscipit ex veritatis maiores sequi! Laudantium iure rerum, maiores ratione voluptatum odio iste accusantium blanditiis totam assumenda quae amet dolorem. Quos est doloremque blanditiis, unde optio voluptatem magnam rem eius!</div>
+
+
+        <form action="/" class="forms" method="post">
+            <h1>Get In turch</h1>
+            <input type="name" class="inputText" placeholder="Enter your name" required>
+            <input type="email" class="inputText" placeholder="Enter your email" required>
+            <textarea  id="textarea" class="inputText" placeholder="Write a coment" ></textarea>
+            <button>submit</button>
+            <a href="./index.html"></a>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                // if you only want it to run once, you can unobserve here:
+                // observer.unobserve(entry.target);
+              } else {
+                // remove to allow re-trigger on scroll back up
+                entry.target.classList.remove('animate');
+              }
+            });
+          }, {
+            threshold: 0.1  // fire when 10% of the element is visible
+          });
+      
+          document.querySelectorAll('.fad-in').forEach(el => {
+            observer.observe(el);
+          });
+        });
+
+       
+      </script>
+      
+</body>
+</html>
