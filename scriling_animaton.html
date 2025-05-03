@@ -36,7 +36,11 @@
             margin: 2em;
             padding: 2em;
             background-color: white;
-            
+            text-shadow: 02 4px 0 rgba(220, 207, 207, 0.14);
+            box-shadow: 0 4px 8px rgb(255, 0, 0);
+        }
+        .box:hover{
+            box-shadow: 0 4px 8px rgb(195, 192, 186);
         }
         .box:first-child{
             background-color: orange;
@@ -89,7 +93,7 @@
             margin: 3px;
             height: 2em;
             text-emphasis: 7pc;
-            animation: slidergg 1s linear forwards;
+          
         }
         #textarea{
             resize: none;
@@ -126,7 +130,6 @@
         border-radius: 3pc;
         margin: 3em;
     }
-
    
     </style>
 </head>
@@ -161,6 +164,20 @@
             <textarea  id="textarea" class="inputText" placeholder="Write a coment" ></textarea>
             <button>submit</button>
             <a href="./index.html">Black Histry</a>
+            <progress></progress>
+            <progress></progress>
+            <progress class="fad-in"></progress>
+            <progress class="fad-in"></progress>
+            <progress class="fad-in"></progress>
+            <progress class="fad-in"></progress>
+            <progress class="fad-in"></progress>
+            <progress class="fad-in"></progress>
+            <progress class="fad-in"></progress>
+            <progress class="fad-in"></progress>
+            <progress class="fad-in"></progress>
+            <progress class="fad-in"></progress>
+            <progress class="fad-in"></progress>
+            <progress class="fad-in"></progress>
         </form>
     </div>
 
@@ -174,7 +191,7 @@
                 // observer.unobserve(entry.target);
               } else {
                 // remove to allow re-trigger on scroll back up
-                entry.target.classList.remove('animate');
+                 entry.target.classList.remove('animate');
               }
             });
           }, {
@@ -185,9 +202,7 @@
             observer.observe(el);
           });
         });
-
-       
       </script>
-      
+     
 </body>
 </html>

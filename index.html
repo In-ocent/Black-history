@@ -37,6 +37,7 @@
       padding: 2rem;
       text-align: center;
       position: relative;
+    
     }
 
     header h1 {
@@ -117,16 +118,42 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    #bbb{
+      cursor: pointer;
+      background-color: red;
+      border-radius: 3px;
+      padding: 3px;
+      font-size: large;
+      font-weight: bold;
+    }
+    .btn{
+      background-color: red;
+      color: #777;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 3px;
+      text-align: center;
+      
+      width: 100%;
+      margin-bottom: 1.2em;
+      
+    }
   </style>
 </head>
 <body>
-
+  <div class="enleachPeaker">
+    <div class="btn" title="click tart now">Read The Text Louder</div>
   <header>
+    
     <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
     <h1>Tribute to Black History</h1>
     <p>Honoring the legacies of leaders, thinkers, and trailblazers.</p>
+    
   </header>
 
+
+  
   <main class="container">
     <!-- Repeat your tribute cards below -->
 
@@ -181,42 +208,58 @@
   </main>
 
   <footer>
+    
     <p>Designed by [Paul Innocent] &copy; 2025 – Honoring Legacy Through Code</p>
     <a href="./scriling_animaton.html">Designs</a>
   </footer>
-
+</div>
   <script>
-    // Theme Toggle
-    const body = document.body;
-    const toggleBtn = document.querySelector('.theme-toggle');
+     // Theme Toggle
+ const body = document.body;
+ const toggleBtn = document.querySelector('.theme-toggle');
 
-    function setTheme(mode) {
-      body.className = mode;
-      localStorage.setItem('theme', mode);
-      toggleBtn.textContent = mode === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode';
-    }
+ function setTheme(mode) {
+   body.className = mode;
+   localStorage.setItem('theme', mode);
+   toggleBtn.textContent = mode === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode';
+ }
 
-    function toggleTheme() {
-      const newMode = body.classList.contains('light') ? 'dark' : 'light';
-      setTheme(newMode);
-    }
+ function toggleTheme() {
+   const newMode = body.classList.contains('light') ? 'dark' : 'light';
+   setTheme(newMode);
+ }
 
-    // On page load
-    window.addEventListener('DOMContentLoaded', () => {
-      const savedTheme = localStorage.getItem('theme') || 'dark';
-      setTheme(savedTheme);
-    });
+ // On page load
+ window.addEventListener('DOMContentLoaded', () => {
+   const savedTheme = localStorage.getItem('theme') || 'dark';
+   setTheme(savedTheme);
+ });
 
-    // Fade-in effect
-    const fadeInElements = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-        }
-      });
-    });
-    fadeInElements.forEach(el => observer.observe(el));
+ // Fade-in effect
+ const fadeInElements = document.querySelectorAll('.fade-in');
+ const observer = new IntersectionObserver((entries) => {
+   entries.forEach(entry => {
+     if(entry.isIntersecting){
+       entry.target.classList.add('visible');
+     }
+   });
+ });
+ fadeInElements.forEach(el => observer.observe(el));
+
+ const bbElemeny = document.getElementById("bbb").addEventListener("click",()=>{
+  window.print()
+ })
+
+ const enleachPeakerEl = document.querySelector(".enleachPeaker")
+ const btnEl = document.querySelector(".btn")
+
+  speach = () =>{
+    let text = enleachPeakerEl.textContent
+    const voice = new SpeechSynthesisUtterance(text)
+    window.speechSynthesis.speak(voice)
+    style.bacground = "::selection"
+  }
+  btnEl.addEventListener("click",speach)
   </script>
 
 </body>
