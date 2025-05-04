@@ -246,20 +246,19 @@
  });
  fadeInElements.forEach(el => observer.observe(el));
 
- const bbElemeny = document.getElementById("bbb").addEventListener("click",()=>{
-  window.print()
- })
 
  const enleachPeakerEl = document.querySelector(".enleachPeaker")
  const btnEl = document.querySelector(".btn")
 
-  speach = () =>{
-    let text = enleachPeakerEl.textContent
+ let speaking = () =>{
+    let text = enleachPeakerEl.textContent.trim()
+    if(!text)return;
     const voice = new SpeechSynthesisUtterance(text)
     window.speechSynthesis.speak(voice)
-    style.bacground = "::selection"
+    
   }
-  btnEl.addEventListener("click",speach)
+  btnEl.addEventListener("click",speaking)
+
   </script>
 
 </body>
